@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">JVA</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Anish Jangra</string>
+    <string name="nav_header_subtitle">jangra.anish@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="forgot_password"><u>Forgot Password</u></string>
+    <string name="signup"><u>Sign Up</u></string>
+    <string name="signin"><u>Sign In</u></string>
+    <string name="self_help">Self Help</string>
+    <string name="services">JVA Services</string>
+    <string name="kb">Knowledge Bank</string>
+    <string name="news">News</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="ticket">Tickets</string>
+    <string name="document_center">Document Center</string>
+    <string name="logout">Logout</string>
+    <string name="contactusheading">You can contact us on following.</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+
+    <string-array name="customertype">
+        <item>Select Organisation Type</item>
+        <item>Medium(4-8)</item>
+        <item>Accounting </item>
+        <item> Gst</item>
+        <item>Income Tax Audit</item>
+        <item>Company Audit </item>
+        <item>Foriegn Complainces </item>
+        <item>TDS/TCS </item>
+    </string-array>
+</resources>

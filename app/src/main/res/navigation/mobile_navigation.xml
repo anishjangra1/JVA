@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.jva.ui.home.HomeFragment"
+        android:label="@string/services"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.jva.ui.gallery.SelfHelpFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.jva.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_contact_us"
+        android:name="com.jva.ui.contactus.ContactUsFragment"
+        android:label="Contact Us" />
+    <fragment
+        android:id="@+id/nav_knowledge_bank"
+        android:name="com.jva.ui.knowledgeBank.KnowledgeBankFragment"
+        android:label="Knowledge Bank" />
+    <fragment
+        android:id="@+id/nav_ticket"
+        android:name="com.jva.ui.tickets.TicketsFragment"
+        android:label="Tickets" />
+    <fragment
+        android:id="@+id/nav_document_center"
+        android:name="com.jva.ui.documentcenter.DocumentCenterFragment"
+        android:label="Document Center" />
+    <fragment
+        android:id="@+id/nav_news"
+        android:name="com.jva.ui.news.NewsFragment"
+        android:label="News Updates" />
+</navigation>

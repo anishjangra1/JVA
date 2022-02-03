@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_baseline_design_services_24"
+            android:iconTint="@color/purple"
+            android:id="@+id/nav_home"
+            android:title="@string/services" />
+        <item
+            android:icon="@drawable/self_help"
+            android:id="@+id/nav_self_help"
+            android:title="@string/self_help" />
+
+
+        <item
+            android:icon="@drawable/ic_baseline_knowledge_bank_24"
+            android:id="@+id/nav_knowledge_bank"
+            android:iconTint="@color/purple"
+            android:title="@string/kb" />
+
+        <item
+            android:icon="@drawable/news"
+            android:id="@+id/nav_news"
+            android:title="@string/news" />
+
+        <item
+            android:icon="@drawable/ic_baseline_contact_phone_24"
+            android:id="@+id/nav_contact_us"
+            android:title="@string/contact_us" />
+
+        <item
+            android:icon="@drawable/ic_baseline_ticket_2_24"
+            android:id="@+id/nav_ticket"
+            android:title="@string/ticket" />
+        <item
+            android:icon="@drawable/ic_baseline_document_center"
+            android:id="@+id/nav_document_center"
+            android:title="@string/document_center" />
+
+        <item
+            android:icon="@drawable/logout"
+            android:id="@+id/nav_logout"
+            android:title="@string/logout" />
+    </group>
+</menu>
