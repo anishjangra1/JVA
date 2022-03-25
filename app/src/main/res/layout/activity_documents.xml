@@ -3,44 +3,32 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardElevation="10dp"
-        app:cardCornerRadius="10dp"
-        android:layout_margin="5dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardMaxElevation="12dp"
-        app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
-        >
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-      <TextView
-          android:text="Document"
-          style="@style/TextAppearance.AppCompat.Large"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"></TextView>
 
-      <TextView
-          android:text="Please download this document"
-          style="@style/TextAppearance.AppCompat.Medium"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"></TextView>
-        </LinearLayout>
-    <ImageView
-        android:layout_gravity="center_vertical"
-        android:src="@drawable/download"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></ImageView>
-    </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDocuments"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:ignore="MissingConstraints"
+            tools:listitem="@layout/item_document_center" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

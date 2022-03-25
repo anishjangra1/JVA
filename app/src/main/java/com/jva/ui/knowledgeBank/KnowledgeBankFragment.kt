@@ -4,17 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import com.jva.databinding.FragmentContactusBinding
-import com.jva.databinding.FragmentGalleryBinding
 import com.jva.databinding.FragmentKnowledgebankBinding
+import com.jva.ui.adapter.KnowledgeCenterAdapter
+import com.jva.ui.viewmodels.JVMViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class KnowledgeBankFragment : Fragment() {
 
-    private lateinit var viewModel: KnowledgeBankViewModel
+    private val viewModel: JVMViewModel  by viewModels()
     private var _binding: FragmentKnowledgebankBinding? = null
 
     // This property is only valid between onCreateView and
@@ -26,20 +27,32 @@ class KnowledgeBankFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewModel =  ViewModelProvider(this)?.get(KnowledgeBankViewModel::class.java)
 
         _binding = FragmentKnowledgebankBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        val textView: TextView = binding.textContactus
-//        viewModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it
-//        })
+        showProgress(true)
+        viewModel.fetchKnowledgeCenterResponse()
+
+        viewModel.responseKnowledge.observe(viewLifecycleOwner, Observer {
+            showProgress(false)
+
+            it?.let {
+
+                binding.rvCategories.adapter = KnowledgeCenterAdapter(it.data!!.data) {
+
+                }
+            }
+
+        })
         return root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+    private fun showProgress(show: Boolean) {
+        _binding?.progressBar?.visibility = if (show) View.VISIBLE else View.GONE
     }
 }

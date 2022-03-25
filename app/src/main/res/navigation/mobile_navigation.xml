@@ -9,7 +9,11 @@
         android:id="@+id/nav_home"
         android:name="com.jva.ui.home.HomeFragment"
         android:label="@string/services"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_contact_us"
+            app:destination="@id/nav_contact_us" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -42,4 +46,38 @@
         android:id="@+id/nav_news"
         android:name="com.jva.ui.news.NewsFragment"
         android:label="News Updates" />
+    <fragment
+        android:id="@+id/nav_self_help"
+        android:name="com.jva.ui.selfhelp.SelfHelpFragment"
+        android:label="Self Help" >
+        <action
+            android:id="@+id/action_nav_self_help_to_selfHelpSubCatFragment2"
+            app:destination="@id/nav_self_sub_help" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_self_sub_help"
+        android:name="com.jva.ui.selfhelp.SelfHelpSubCatFragment"
+        android:label="Self Help" >
+
+        <action
+            android:id="@+id/action_nav_self_sub_help_to_selfHelpAllCatFragment"
+            app:destination="@id/selfHelpAllCatFragment" />
+        <argument
+            android:name="category_id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/selfHelpAllCatFragment"
+        android:name="com.jva.ui.selfhelp.SelfHelpAllCatFragment"
+        android:label="SelfHelpAllCatFragment" >
+        <argument
+            android:name="category_id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="subcategory_id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 </navigation>

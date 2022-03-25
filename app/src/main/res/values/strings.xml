@@ -25,6 +25,9 @@
     <string name="contactusheading">You can contact us on following.</string>
     <string name="phone">Phone</string>
     <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="welcome">Welcome</string>
+    <string name="dialogMessage">Do you want to logout?</string>
 
     <string-array name="customertype">
         <item>Select Organisation Type</item>

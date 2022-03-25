@@ -1,11 +1,10 @@
 package com.jva.ui.main.adapter
 
 import android.view.LayoutInflater
-import android.view.View
+
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.jva.R
+
 import com.jva.data.model.User
 import com.jva.databinding.ItemLayoutBinding
 
@@ -34,9 +33,9 @@ class MainAdapter(private val users: ArrayList<User>) : RecyclerView.Adapter<Mai
             holder.binding.apply {
                  textViewUserName.text = user.name
                  textViewUserEmail.text = user.email
-                Glide.with(imageViewAvatar.context)
-                    .load(user.avatar)
-                    .into(imageViewAvatar)
+//                Glide.with(imageViewAvatar.context)
+//                    .load(user.avatar)
+//                    .into(imageViewAvatar)
 
         }
     }
